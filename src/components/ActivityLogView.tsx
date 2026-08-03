@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Activity } from 'lucide-react';
 import { getLocalYYYYMMDD, getWeekdayLabel } from '../utils/dateUtils';
@@ -48,7 +48,7 @@ export function ActivityLogView({ activityLog }: ActivityLogViewProps) {
                   ? 'bg-ink-900 text-linen-50 shadow-md shadow-ink-900/20'
                   : day.status === 'rest'
                     ? 'bg-linen-200 text-ink-500'
-                    : 'bg-linen-50 border-2 border-dashed border-linen-200 text-ink-500/40'
+                    : 'bg-linen-50 border-2 border-dashed border-linen-200 text-ink-500'
               }`}
             >
               <span className="font-serif text-lg">{day.displayDate}</span>

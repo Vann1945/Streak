@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Target, PenLine, Check } from 'lucide-react';
 import { sanitizeHabitName } from '../utils/safeStorage';
@@ -35,7 +35,7 @@ export function HabitHeader({ isEditingName, habitName, setHabitName, setIsEditi
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
       <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2 mb-2 text-ink-500/80">
+        <div className="flex items-center gap-2 mb-2 text-ink-500">
           <Target className="w-4 h-4" />
           <span className="text-xs font-semibold uppercase tracking-widest">Current Focus</span>
         </div>
