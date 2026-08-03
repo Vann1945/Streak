@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { getLocalYYYYMMDD } from './utils/dateUtils';
 import { readActivityLog, sanitizeHabitName, safeGetItem, safeSetItem, type ActivityLog } from './utils/safeStorage';
 import { HabitHeader } from './components/HabitHeader';
@@ -134,7 +134,7 @@ function App() {
         <div className="flex justify-center pb-12 pt-8">
           <button
             onClick={() => setIsResetModalOpen(true)}
-            className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-500/70 hover:text-ink-900 transition-colors"
+            className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-500 hover:text-ink-900 transition-colors"
           >
             <RotateCcw className="w-3 h-3" />
             Reset Journey
