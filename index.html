@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'">
+    <meta name="description" content="Voltra Tracker - A premium, minimalist daily consistency tracker." />
+    <meta property="og:title" content="Voltra Tracker" />
+    <meta property="og:description" content="Build your habits day by day with uncompromising aesthetics." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#fdfdfc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Voltra Tracker</title>
+    <script>
+      // Anti-scraping / Anti-inspection measures
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      document.addEventListener('keydown', function (event) {
+        if (event.keyCode == 123) { // F12
+          event.preventDefault();
+        }
+        if (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74 || event.keyCode == 67)) { // Ctrl+Shift+I/J/C
+          event.preventDefault();
+        }
+        if (event.ctrlKey && event.keyCode == 85) { // Ctrl+U
+          event.preventDefault();
+        }
+      });
+      
+      // Advanced Anti-Debugger Trap
+      setInterval(function() {
+        const start = performance.now();
+        debugger;
+        const end = performance.now();
+        if (end - start > 100) {
+          document.body.innerHTML = '<div style="display:flex;height:100vh;width:100vw;align-items:center;justify-content:center;background:#000;color:#fff;font-family:sans-serif;font-weight:bold;font-size:24px;">Security Violation. Access Denied.</div>';
+        }
+      }, 2000);
+      
+      if (navigator.webdriver) {
+        document.documentElement.innerHTML = '';
+      }
+    </script>
+  </head>
+  <body class="antialiased font-sans bg-[#fdfdfc] text-zinc-900 selection:bg-zinc-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

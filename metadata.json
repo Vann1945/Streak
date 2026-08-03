@@ -1,0 +1,6 @@
+{
+  "name": "Voltra Tracker",
+  "description": "Aplikasi tracker harian dengan UI minimalis, berkinerja tinggi, dan ramah aksesibilitas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
