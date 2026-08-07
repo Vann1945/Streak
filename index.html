@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Security headers (CSP, X-Frame-Options, Permissions-Policy, etc.) are
+      NOT declared here via <meta>. Several critical directives — notably
+      frame-ancestors — are silently ignored by browsers when delivered via
+      a meta tag, giving a false sense of protection. All security headers
+      are instead sent as real HTTP response headers from vercel.json /
+      public/_headers, which is the only place they take effect.
+    -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Voltra Tracker - A premium, minimalist daily consistency tracker." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Voltra Tracker" />
+    <meta property="og:description" content="Build your habits day by day with uncompromising aesthetics." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#f5f4ed" />
+    <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <title>Voltra Tracker</title>
+    <!--
+      Minimal inline fallback style: paints the parchment background and
+      base text color the instant the HTML parses, before React mounts or
+      Tailwind's generated styles apply. In the production build (see
+      inlineCssPlugin in vite.config.ts) the full stylesheet is also
+      inlined directly into this document — eliminating the separate CSS
+      file as a render-blocking network request entirely — so this block
+      mainly guards the brief window between HTML parse and style
+      application, and keeps `npm run dev` (which still injects CSS via
+      Vite's HMR client, not this plugin) from flashing white first.
+    -->
+    <style>
+      body {
+        background-color: #f5f4ed;
+        color: #141413;
+        font-family:
+          "Inter",
+          ui-sans-serif,
+          system-ui,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body class="antialiased font-sans bg-linen-100 text-ink-900 selection:bg-ember-500/30">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
